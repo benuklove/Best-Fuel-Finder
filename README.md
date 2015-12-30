@@ -1,6 +1,6 @@
 # CS50x_Final_Project
 
-It's not pretty, it's a half-hearted attempt at MVC, and has only a modicum of error checking.  But it works.  And it only took me three weeks.  :S
+It's not pretty, it's a less than half-hearted attempt at MVC, and has only a modicum of error checking.  But it works.  And I'm proud of what I did.  And it only took me three weeks.  :S
 
 Given an origin and destination in the U.S., this web application finds the best places to fuel a class 8 diesel truck.
 
