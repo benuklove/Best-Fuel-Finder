@@ -13,4 +13,4 @@ Alas, I would have liked to do my final project in C, but I had the problem in m
 I would like to thank:
 David Malan, and all of the current and former staff who put together this amazing course - not the least of whom are Zamyla, Allison, Nate, Tommy, Rob, Daven, Glenn, Christopher, Chris, Bannus, Kevin, Mark, Jackson, and Lauren.
 Also, social moderators and active members like Kareem, Brenda, and Cliff.
-Thank you to Harvard, EdX, and hopfully soon LaunchCode!
+Thank you to Harvard, EdX, and hopefully soon LaunchCode!
