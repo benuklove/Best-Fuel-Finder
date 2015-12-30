@@ -8,6 +8,8 @@ It uses Google's Javascript API to access their Directions Service, Distance Mat
 
 It then determines optimal fuel stops along your selected route.
 
+This is all served from localhost as I have yet to transfer it to a commercial server.
+
 Alas, I would have liked to do my final project in C, but I had the problem in mind first, and given the tools available I took what I thought was the appropriate path.
 
 I would like to thank:
