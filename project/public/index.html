@@ -1,0 +1,95 @@
+<!--
+
+index.html
+
+Benjamin Love
+benuklove@gmail.com
+
+Computer Science 50
+Harvard University
+
+A diesel fuel purchase optimizer by price for over the road trucks.
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <!-- from https://developers.google.com/maps/documentation/javascript/examples/directions-complex -->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+
+        <!-- app's own CSS -->
+        <link href="/css/styles.css" rel="stylesheet"/>
+
+        <!-- https://developers.google.com/maps/documentation/javascript/ -->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+        <!-- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/ -->
+        <script src="/js/markerwithlabel_packed.js"></script>
+
+        <!-- http://jquery.com/ -->
+        <script src="/js/jquery-1.11.1.min.js"></script>
+
+        <!-- http://getbootstrap.com/ -->
+        <script src="/js/bootstrap.min.js"></script>
+
+        <!-- http://underscorejs.org/ -->
+        <script src="/js/underscore-min.js"></script>
+
+        <!-- https://github.com/twitter/typeahead.js/ -->
+        <script src="/js/typeahead.jquery.js"></script>
+
+        <!-- app's own JavaScript -->
+        <script src="/js/scripts.js"></script>
+
+        <title>BFF - Best Fuel Finder</title>
+
+    </head>
+    <body>
+
+        <!-- fill viewport -->
+        <!--<div class="container-fluid">-->
+
+            <!-- https://developers.google.com/maps/documentation/javascript/tutorial -->
+            <!--<div id="map-canvas"></div>-->
+
+            <!-- http://getbootstrap.com/css/#forms -->
+            <form class="form-inline" id="form" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="q">City, State, Postal Code</label>
+                    <input class="form-control" id="q" placeholder="City, State, Postal Code" type="text"/>
+                </div>
+            </form>
+            
+        <!--</div>-->
+        <div id="floating-panel">
+            <b>Start: </b>
+            <select id="start">
+              <option value="penn station, new york, ny">Penn Station</option>
+              <option value="grand central station, new york, ny">Grand Central Station</option>
+              <option value="625 8th Avenue, New York, NY, 10018">Port Authority Bus Terminal</option>
+              <option value="staten island ferry terminal, new york, ny">Staten Island Ferry Terminal</option>
+              <option value="101 E 125th Street, New York, NY">Harlem - 125th St Station</option>
+            </select>
+            <b>End: </b>
+            <select id="end">
+              <option value="260 Broadway New York NY 10007">City Hall</option>
+              <option value="W 49th St & 5th Ave, New York, NY 10020">Rockefeller Center</option>
+              <option value="moma, New York, NY">MOMA</option>
+              <option value="350 5th Ave, New York, NY, 10118">Empire State Building</option>
+              <option value="253 West 125th Street, New York, NY">Apollo Theater</option>
+              <option value="1 Wall St, New York, NY">Wall St</option>
+            </select>
+        </div>
+        <div id="map"></div>
+        &nbsp;
+        <div id="warnings-panel"></div>
+    </body>
+</html>

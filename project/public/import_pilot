@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?
+    // constants and functions
+    require("../includes/config.php");
+
+    // parse source
+    if (!($tidy = tidy_parse_file("http://www.pilotflyingj.com/view-location?id=1", array("numeric-entities" => true, "output-xhtml" => true))))
+        continue;
+        
+    // convert to XHTML
+    $tidy->cleanRepair();
+    $xhtml = (string) $tidy;
+
+    // parse XHTML
+    $dom = simplexml_load_string($xhtml);
+
+    // register XHTML namespace
+    $dom->registerXPathNamespace("xhtml", "http://www.w3.org/1999/xhtml");
+
+    // get store paragraphs's
+    $paras = $dom->xpath("//xhtml:div[@id='indiv-location-name']/xhtml:p");
+
+
+
+
+?>

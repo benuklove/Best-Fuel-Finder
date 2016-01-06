@@ -1,0 +1,44 @@
+#!/usr/bin/env php
+<?php
+
+    // Insert (not update) Pilot/FlyingJ store information (except lat/lngs) to fuelstops database
+    
+    //configuration
+    require("../includes/config.php");
+    
+    $filename = $argv[1];
+    if ($argc != 2)
+    {
+        echo "Usage: ./import file_to_import\n";
+    }
+    else
+    {
+        if (is_readable($filename))
+        {
+            echo "The file $filename is readable\n";
+
+            $row = 1;
+            if (($handle = fopen($filename, "r")) !== FALSE) 
+            {
+                while (($data = fgetcsv($handle, 500, ",")) !== FALSE)
+                {
+                    $store_id = intval($data[0]);
+
+                    $price = floatval(trim($data[9], '"$'));
+                    
+                    $result = query("INSERT INTO fuelstops (store_id, brand, price, location, state) VALUES (?, ?, ?, ?, ?)", $store_id, $data[1], $price, $data[4], $data[3]);
+                    if ($result === false)
+                    {
+                        apologize("Error communicating with database.");
+                    }
+                    $row++;   
+                }
+                fclose($handle);
+            }
+        }
+        else
+        {
+            echo "The file $filename is not readable or does not exist\n";
+        }
+    }
+?>
