@@ -2,11 +2,12 @@
 
 Given an origin and destination in the U.S., this web application finds the best places to fuel a class 8 diesel truck.
 
-It uses Google's Javascript API to access their Directions Service, Distance Matrix API, and Places Library.  It will keep track of your user settings (current fuel level, etc) via PHP sessions and it accesses data from a MySQL database that has been populated by web scraping fuel price/location info from major diesel fuel retailers.
+It uses Google's Maps Javascript API to access their Directions Service, Distance Matrix API, and Places Library.  It will keep track of your user settings (current fuel level, etc) via PHP sessions and it accesses data from a MySQL database that has been populated by web scraping fuel price/location info from major diesel fuel retailers.
 
 It then determines optimal fuel stops along your selected route.
 
 This is all served from localhost as I have yet to transfer it to a commercial server.
+Update: available at https://benlove.info/login.php
 
 *** You will need a Google API Key to actually use this. ***
 
