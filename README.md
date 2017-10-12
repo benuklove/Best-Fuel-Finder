@@ -7,7 +7,7 @@ It uses Google's Maps Javascript API to access their Directions Service, Distanc
 It then determines optimal fuel stops along your selected route.
 
 This is all served from localhost as I have yet to transfer it to a commercial server.
-Update: available at https://benlove.info/login.php
+<br> Update: available at https://benlove.info/login.php
 
 *** You will need a Google API Key to actually use this. ***
 
